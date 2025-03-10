@@ -1,0 +1,142 @@
+/* Mobile styles - for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    body {
+        margin: 0 20px;
+    }
+
+    
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+   
+    .hero {
+        height: fit-content;
+    }
+
+    .hero-text {
+        margin: 40px 10px;
+        width: 90%;
+    }
+
+    .hero-text h1 {
+        font-size: 20px;
+    }
+
+    .hero-text p {
+        font-size: 12px;
+    }
+
+   
+    .search-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-bar button {
+        width: 100%;
+    }
+
+   
+    .pet-cards, .featured-pet-cards {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .card, .featured-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    
+    .pet-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item:nth-child(3n) {
+        grid-row: auto;
+    }
+
+    /* About us page */
+    .about-us {
+        height: 40vh;
+    }
+
+    .about-us-content {
+        display: none;
+    }
+
+    #about-p {
+        font-size: 1.8rem;
+    }
+
+    .vision-cards {
+        gap: 20px;
+    }
+
+    .mission {
+        max-width: 100%;
+    }
+
+    
+    iframe {
+        width: 100% !important;
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    .carousel-container {
+        width: 100%;
+        height: 200px;
+    }
+
+    /* Pets page */
+    .filter ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .filter li {
+        margin: 5px;
+    }
+
+    .pets {
+        justify-content: center;
+    }
+
+    .pet-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Contact form */
+    .contact-form {
+        padding: 15px;
+    }
+
+    .contact-form input, #message {
+        width: 100%;
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .footer-content ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}

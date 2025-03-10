@@ -41,7 +41,7 @@ body{
 .hero{
     margin-top: 20px;
     border-radius: 10px;
-    background: url('/assets/hero.jpg') no-repeat center center/cover;
+    background: url('assets/hero.jpg') no-repeat center center/cover;
     height: 60vh;
     position: relative;
     display: flex;
@@ -415,7 +415,7 @@ footer{
 }
 .about-us{
     margin-top: 20px;
-    background: url('/assets/about.png') no-repeat center center/cover;
+    background: url('assets/about.png') no-repeat center center/cover;
     height: 60vh;
     border-radius: 10px;
     padding: 2px;
@@ -442,6 +442,7 @@ footer{
     border: none;
     margin-top: 20px;
     cursor: pointer;
+    font-size: 1rem;
 }
 .about-us-content button:hover{
     background-color: #2b2b2b;
@@ -467,7 +468,7 @@ footer{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 3px 3px 4px rgba(0,0,0,0.1);
 }
 .mission p{
     font-size: 1rem;
@@ -482,3 +483,61 @@ footer{
     width: 100%;
     border-radius: 10px;
 }
+.carousel-container {
+    position: relative;
+    max-width: 600px;
+    align-items: center;
+    margin: auto;
+    overflow: hidden;
+  }
+  .iframe{
+    align-items: center;
+    justify-content: center;
+    border: 20px 0;
+  }
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .carousel-item.active {
+    display: block;
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }

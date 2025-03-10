@@ -5,9 +5,8 @@ const petCards = document.querySelectorAll('.pet-card');
 // Add click event listeners to filter buttons
 filterButtons.forEach(button => {
     button.addEventListener('click', (e) => {
-        e.preventDefault(); // Prevent default link behavior
+        e.preventDefault(); 
         
-        // Remove active class from all buttons
         filterButtons.forEach(btn => btn.classList.remove('active'));
         // Add active class to clicked button
         button.classList.add('active');
@@ -32,7 +31,6 @@ filterButtons.forEach(button => {
 
 const boxes = document.querySelectorAll('.box');
 
-// Trigger the animation immediately for hero section
 window.addEventListener('DOMContentLoaded', () => {
     const hero = document.querySelector('.hero','.contact-form');
     if (hero) {
@@ -40,7 +38,6 @@ window.addEventListener('DOMContentLoaded', () => {
             hero.classList.add('show');
         }, 100);
     }
-    // Initial check for elements in view
     checkBoxes();
 });
 
@@ -59,3 +56,15 @@ function checkBoxes() {
         }
     });
 }
+let currentSlide = 0;
+const slides = document.querySelectorAll('.carousel-item');
+
+function moveSlide(step) {
+  currentSlide = (currentSlide + step + slides.length) % slides.length;
+  slides.forEach((slide, index) => {
+    slide.classList.toggle('active', index === currentSlide);
+  });
+}
+
+// Auto-play
+setInterval(() => moveSlide(1), 3000);
